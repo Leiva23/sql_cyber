@@ -16,7 +16,7 @@ INSERT INTO comandes (num_comanda, preu_total, data, estat, dni_client)
     (5, 14.56, '2024-05-11', 'en preparacio', '42837583E');
 
 
-INSERT INTO pizzes (nom, preu_base)
+INSERT INTO pizzes (id, nom, preu_base)
     VALUES ('Margarita', 9.95),
     ('Diavola', 8.75),
     ('Pepperoni', 10.95),
@@ -24,7 +24,7 @@ INSERT INTO pizzes (nom, preu_base)
     ('Napolitana', 9.75);
 
 
-INSERT INTO masses (nom, preu)
+INSERT INTO masses (id, nom, preu)
     VALUES ('Fina', 4.95),
     ('Classica', 5.95),
     ('Gruixuda', 7.95),
@@ -32,14 +32,14 @@ INSERT INTO masses (nom, preu)
     ('Integral', 5.95);
 
 
-INSERT INTO al·lergogens (nom, descripcio)
+INSERT INTO al·lergogens (id, nom, descripcio)
     VALUES ('Ou', ''),
     ('Lactosa', ''),
     ('Gluten', ''),
     ('Marisc', ''),
     ('Soja', '');
 
-INSERT INTO tipus_ingredients (nom, descripcio)
+INSERT INTO tipus_ingredients (id, nom, descripcio)
     VALUES ('Carn', ),
     ('Vegetals'),
     ('Marisc'),
