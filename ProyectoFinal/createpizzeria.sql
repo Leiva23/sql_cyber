@@ -88,5 +88,5 @@ CREATE TABLE IF NOT EXISTS pizzes_ingredients(
 	grams_per_ingredient INT UNSIGNED,
 	PRIMARY KEY(id_pizza, id_alergogen),
 	FOREIGN KEY(id_pizza) REFERENCES pizzes(id),
-	FOREIGN KEY(id_alergogen) REFERENCES ingredients(id)
+	FOREIGN KEY(id_alergogen) REFERENCES al·lergogens(id)
 );
