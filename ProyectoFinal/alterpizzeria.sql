@@ -1,0 +1,12 @@
+ALTER TABLE comandes MODIFY num_comanda INT UNSIGNED AUTO_INCREMENT;
+ALTER TABLE pizzes MODIFY id INT UNSIGNED AUTO_INCREMENT;
+ALTER TABLE masses MODIFY id INT UNSIGNED AUTO_INCREMENT;
+ALTER TABLE al·lergogens MODIFY id INT UNSIGNED AUTO_INCREMENT;
+ALTER TABLE tipus_ingredients MODIFY id INT UNSIGNED AUTO_INCREMENT;
+ALTER TABLE ingredients MODIFY id INT UNSIGNED AUTO_INCREMENT;
+
+ALTER TABLE estat MODIFY estat ENUM('en preparacio', 'lliurada', 'cancel·lada');
+
+
+ALTER TABLE pizzes_ingredients 
+MODIFY grams_per_ingredients INT CHECK (grams_per_ingredient BETWEEN 10 AND 30);
