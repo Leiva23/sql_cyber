@@ -17,11 +17,11 @@ INSERT INTO comandes (num_comanda, preu_total, data, estat, dni_client) VALUES
 
 
 INSERT INTO pizzes (id, nom, preu_base) VALUES
-    (1, 'Margarita', 9.95),
-    (2, 'Diavola', 8.75),
-    (3, 'Pepperoni', 10.95),
-    (4, 'Cuatro Quesos', 8.25),
-    (5, 'Napolitana', 9.75);
+    (1, 'Margarita', 14.95),
+    (2, 'Diavola', 22.75),
+    (3, 'Pepperoni', 16.95),
+    (4, 'Cuatro Quesos', 12.25),
+    (5, 'Napolitana', 16.75);
 
 
 INSERT INTO masses (id, nom, preu) VALUES
@@ -47,18 +47,38 @@ INSERT INTO tipus_ingredients (id, nom, descripcio) VALUES
     (5, 'Salsa', 'BBQ, Salsa de tomaquet, Salsa picant');
 
 INSERT INTO ingredients (id, nom, preu, descripcio, id_tipus) VALUES 
-    (1, 'Pepperoni', 1.25, 'Carn'),
-    (2, 'Mozzarella', 2.25, 'Formatge'),
-    (3, 'Xampinyons', 1.25, 'Fruits secs'), 
-    (4, 'Salsa BBQ', 2.75, 'Salsa'),
-    (5, 'Hortalisses', 3.50, 'Vegetals');
+    (1, 'Pepperoni', 1.25, 'Carn',1),
+    (2, 'Mozzarella', 2.25, 'Formatge',3),
+    (3, 'Nous', 1.25, 'Fruits secs',4), 
+    (4, 'Salsa BBQ', 2.75, 'Salsa',5),
+    (5, 'Hortalisses', 3.50, 'Vegetals',2);
 
 
 INSERT INTO pizzes_masses (id_pizza, id_massa) VALUES
     (1, 1),
+    (1, 2),
+    (1, 3),
+    (1, 4),
+    (1, 5),
+    (2, 1),
     (2, 2),
+    (2, 3),
+    (2, 4),
+    (2, 5),
+    (3, 1),
+    (3, 2),
     (3, 3),
+    (3, 4),
+    (3, 5),
+    (4, 1),
+    (4, 2),
+    (4, 3),
     (4, 4),
+    (4, 5),
+    (5, 1),
+    (5, 2),
+    (5, 3),
+    (5, 4),
     (5, 5);
 
 INSERT INTO comandes_pizzes (num_comanda, id_pizza) VALUES
@@ -69,19 +89,20 @@ INSERT INTO comandes_pizzes (num_comanda, id_pizza) VALUES
     (5, 5);
 
 INSERT INTO ingredients_al·lergogens (id_ingredient, id_alergogen) VALUES
-    (1, 1),
     (2, 2),
-    (3, 3),
+    (4, 3),
     (4, 4),
-    (5, 5);
+    (3, 4),
+    (4, 5);
 
-INSERT INTO pizzes_ingredients (id_pizza, id_alergogen, grams_per_ingredient) VALUES
-    (1, 1, 100),
-    (2, 2, 120),
-    (3, 3, 90),
-    (4, 4, 80),
-    (5, 5, 50);
-
+INSERT INTO pizzes_ingredients (id_pizza, id_ingredient, grams_per_ingredient) VALUES
+    (1, 2, 30),  -- Margarita: Mozzarella
+    (1, 5, 25),  -- Margarita: Hortalisses
+    (2, 1, 30),  -- Diavola: Pepperoni
+    (3, 1, 30),  -- Pepperoni: Pepperoni
+    (4, 2, 15),  -- Cuatro Quesos: Mozzarella
+    (5, 1, 20),  -- Napolitana: Pepperoni
+    (5, 5, 25);  -- Napolitana: Hortalisses
 
 
 
